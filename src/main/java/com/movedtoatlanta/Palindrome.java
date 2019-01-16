@@ -1,3 +1,5 @@
+package com.movedtoatlanta;
+
 import java.util.stream.IntStream;
 
 public class Palindrome {
