@@ -1,0 +1,23 @@
+#The oft neglected git ignore with many additions for many reasons.
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+
+# Eclipse Readme Previewer plugin
+.README.md.html
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+bin/
