@@ -5,6 +5,10 @@ import java.util.function.IntPredicate;
 
 public class RandomStringGenerator {
 
+	private RandomStringGenerator(){
+
+	}
+
 	public static String generateRandomAlphaNumericString(boolean capsOnly, int length) {
 		String alphaNumericString;
 		IntPredicate inRange;

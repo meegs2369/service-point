@@ -6,7 +6,10 @@ import java.util.stream.Collector;
 
 public class SingletonCollector {
 
-	public static <T> Collector<T, List<T>, T> singleFromStream() {
+	private SingletonCollector(){
+
+	}
+	static <T> Collector<T, List<T>, T> singleFromStream() {
 		return Collector.of(ArrayList::new, List::add, (left, right) -> {
 			left.addAll(right);
 			return left;
