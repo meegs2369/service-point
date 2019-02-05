@@ -23,8 +23,7 @@ public class RandomStringGenerator {
 	}
 
 	private static String generate(int upper, int length, IntPredicate inRange) {
-		Random random = new Random();
-		return random.ints(48, upper)
+		return new Random().ints(48, upper)
 					 .filter(inRange)
 					 .mapToObj(i -> (char) i)
 					 .limit(length)

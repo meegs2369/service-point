@@ -12,7 +12,7 @@ public class ListToMap {
 
 	public static Map<String, String> convert(List<String> elements, String delimiter) {
 		return elements.stream()
-					   .collect(Collectors.toMap((x) -> x.split(Pattern.quote(delimiter))[0],
-												 (x) -> x.split(Pattern.quote(delimiter))[1]));
+					   .collect(Collectors.toMap(x -> x.split(Pattern.quote(delimiter))[0],
+												 x -> x.split(Pattern.quote(delimiter))[1]));
 	}
 }

@@ -25,8 +25,8 @@ public class SingletonCollectorTest {
 							  .collect(SingletonCollector.singleFromStream());
 		Assert.assertTrue(mob2.getAttribute3()
 							  .matches("6"));
-		Assert.assertEquals(mob2.getAttribute2()
-								.intValue(), 6);
+		Assert.assertEquals( 6,mob2.getAttribute2()
+								   .intValue());
 	}
 
 }

@@ -6,3 +6,5 @@ It is indeed named after the MK mini-game. This is my proving ground. A place wh
 * SingletonCollector - collect 1 from a stream of objects based on predicate.
 * ListToMap - given a String and a delimiter, use stream to build map.
 * MapToString - given a map of Strings return a string of all values.
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=meegs2369_test-your-might&metric=alert_status)](https://sonarcloud.io/dashboard?id=meegs2369_test-your-might)
