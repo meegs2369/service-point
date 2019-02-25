@@ -3,8 +3,6 @@ package com.movedtoatlanta;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.movedtoatlanta.Palindrome;
-
 public class PalindromeTest {
 	@Test
 	public void testGood() {
