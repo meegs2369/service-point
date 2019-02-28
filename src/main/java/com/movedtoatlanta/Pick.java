@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class Pick {
-	private Pick(){
+	private Pick() {
 	}
 
 	public static int pick(int[] ints) {
@@ -19,10 +19,19 @@ public class Pick {
 
 	private static int findLowest(List<Integer> intList) {
 		Collections.sort(intList);
-		return IntStream.range(0, intList.get(intList.size() - 1))
-						.filter(i -> (!intList.contains(i) && i > 0))
-						.findFirst()
-						.orElse(1);
-
+		Integer high = intList.get(intList.size() - 1);
+		int toplimit = high + 1;
+		int val = IntStream.range(0, toplimit)
+						   .filter(i -> (!intList.contains(i) && i > 0))
+						   .findFirst()
+						   .orElse(-1);
+		if (val == -1) {
+			if (intList.get(0) < 0) {
+				val = 1;
+			} else {
+				val = toplimit;
+			}
+		}
+		return val;
 	}
 }
