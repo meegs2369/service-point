@@ -11,12 +11,11 @@ public class Pick {
 
 	public static int pick(int[] ints) {
 		List<Integer> intList = new ArrayList<>();
-		for (int i = 0; i < ints.length; i++) {
-			intList.add(ints[i]);
+		for (int i :ints) {
+			intList.add(i);
 		}
 		return findLowest(intList);
 	}
-
 	private static int findLowest(List<Integer> intList) {
 		Collections.sort(intList);
 		Integer high = intList.get(intList.size() - 1);
