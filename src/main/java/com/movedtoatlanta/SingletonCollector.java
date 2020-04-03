@@ -6,18 +6,19 @@ import java.util.stream.Collector;
 
 public class SingletonCollector {
 
-	private SingletonCollector(){
+    private SingletonCollector() {
 
-	}
-	static <T> Collector<T, List<T>, T> singleFromStream() {
-		return Collector.of(ArrayList::new, List::add, (left, right) -> {
-			left.addAll(right);
-			return left;
-		}, list -> {
-			if (list.size() != 1) {
-				throw new IllegalStateException();
-			}
-			return list.get(0);
-		});
-	}
+    }
+
+    public static <T> Collector<T, List<T>, T> singleFromStream() {
+        return Collector.of(ArrayList::new, List::add, (left, right) -> {
+            left.addAll(right);
+            return left;
+        }, list -> {
+            if (list.size() != 1) {
+                throw new IllegalStateException();
+            }
+            return list.get(0);
+        });
+    }
 }

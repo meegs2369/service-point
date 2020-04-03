@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Pick implements Provider<Integer> {
+public class NumberSelector implements Provider<Integer> {
     private List<Integer> conversion;
 
-    public Pick(int[] intArr) {
+    public NumberSelector(int[] intArr) {
         Arrays.sort(intArr);
         conversion = Arrays.stream(intArr).boxed().collect(Collectors.toList());
     }
