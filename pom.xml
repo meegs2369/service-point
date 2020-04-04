@@ -8,7 +8,7 @@
     <version>0.1.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.projectKey>meegs2369_test-your-might</sonar.projectKey>
+        <sonar.projectKey>meegs2369_service-point</sonar.projectKey>
         <sonar.organization>${git-organization}</sonar.organization>
         <sonar.host.url>${sonarqube-host}</sonar.host.url>
         <sonar.login>${sonarqube-login}</sonar.login>
