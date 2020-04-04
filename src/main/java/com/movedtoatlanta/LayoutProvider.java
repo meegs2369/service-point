@@ -1,7 +1,7 @@
 package com.movedtoatlanta;
 
 import ch.qos.logback.core.CoreConstants;
-import com.movedtoatlanta.models.CustomSLF4JLoggingEvent;
+import com.movedtoatlanta.interfaces.CustomLoggingEvent;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
- * Class used to mask sensitive data in applications that use slf4j.
+ * Class used to mask sensitive data in applications.
  */
 public class LayoutProvider {
 
@@ -64,12 +64,12 @@ public class LayoutProvider {
     }
 
     /**
-     * format the lines in the log.
+     * Format the line with any masking chosen.
      *
-     * @param event extension of {@link com.movedtoatlanta.models.CustomSLF4JLoggingEvent}
+     * @param event {@link com.movedtoatlanta.interfaces.CustomLoggingEvent}
      * @return String
      */
-    public String format(CustomSLF4JLoggingEvent event) {
+    public String format(CustomLoggingEvent event) {
         return Instant.ofEpochMilli(event.getTimestamp())
                 .atZone(ZoneId.systemDefault())
                 .toLocalDateTime() + "|-" + event.getLevel() + " [" + event.getStackTraceElement()

@@ -1,11 +1,12 @@
 package com.movedtoatlanta.models;
 
 import ch.qos.logback.classic.Level;
+import com.movedtoatlanta.interfaces.CustomLoggingEvent;
 
 /**
- * class to be extended for {@link com.movedtoatlanta.LayoutProvider}.
+ * Class to be extended for {@link com.movedtoatlanta.LayoutProvider} when using SLF4J.
  */
-public abstract class CustomSLF4JLoggingEvent {
+public abstract class CustomSLF4JLoggingEvent implements CustomLoggingEvent {
     private StackTraceElement stackTraceElement;
     private Long timestamp;
     private String formattedMessage;
@@ -24,18 +25,22 @@ public abstract class CustomSLF4JLoggingEvent {
         this.level = level;
     }
 
+    @Override
     public StackTraceElement getStackTraceElement() {
         return this.stackTraceElement;
     }
 
+    @Override
     public Long getTimestamp() {
         return this.timestamp;
     }
 
+    @Override
     public String getFormattedMessage() {
         return this.formattedMessage;
     }
 
+    @Override
     public Level getLevel() {
         return this.level;
     }

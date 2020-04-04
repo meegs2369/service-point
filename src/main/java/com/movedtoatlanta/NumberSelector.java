@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation of Provider to provide the first non zero number in an array.
+ */
 public class NumberSelector implements Provider<Integer> {
     private List<Integer> conversion;
 
@@ -13,6 +16,9 @@ public class NumberSelector implements Provider<Integer> {
         conversion = Arrays.stream(intArr).boxed().collect(Collectors.toList());
     }
 
+    /**
+     * @return Integer
+     */
     @Override
     public Integer get() {
         int selection = 1;

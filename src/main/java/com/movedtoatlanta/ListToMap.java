@@ -15,7 +15,7 @@ public final class ListToMap implements Converter<Map<String, String>, List<Stri
     }
 
     /**
-     * Splits a string into Map on the requested delimiter
+     * Splits a string into Key Value pair on the requested delimiter.
      *
      * @param elements  List (of Strings)
      * @param delimiter String

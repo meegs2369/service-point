@@ -1,7 +1,7 @@
 package com.movedtoatlanta.interfaces;
 
 /**
- * using values U and V convert to T
+ * A converter to be implemented in such a way that param U and V result in an instance of T.
  *
  * @param <T> Class of desired result
  * @param <U> argument to create T
@@ -9,5 +9,12 @@ package com.movedtoatlanta.interfaces;
  */
 
 public interface Converter<T, U, V> {
+    /**
+     * Method to perform the conversion.
+     *
+     * @param u Class
+     * @param v Class
+     * @return Class
+     */
     T convert(U u, V v);
 }
