@@ -1,6 +1,6 @@
-package com.movedtoatlanta;
+package com.movedtoatlanta.converters;
 
-import com.movedtoatlanta.interfaces.Converter;
+import com.movedtoatlanta.converters.interfaces.Converter;
 
 import java.util.List;
 import java.util.Map;

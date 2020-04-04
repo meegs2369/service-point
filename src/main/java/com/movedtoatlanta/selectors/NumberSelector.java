@@ -1,4 +1,4 @@
-package com.movedtoatlanta;
+package com.movedtoatlanta.selectors;
 
 import javax.inject.Provider;
 import java.util.Arrays;

@@ -1,5 +1,6 @@
 package com.movedtoatlanta;
 
+import com.movedtoatlanta.selectors.NumberSelector;
 import org.junit.Assert;
 import org.junit.Test;
 

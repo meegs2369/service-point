@@ -2,7 +2,8 @@ package com.movedtoatlanta;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.core.CoreConstants;
-import com.movedtoatlanta.models.TestLoggingEvent;
+import com.movedtoatlanta.logging.LayoutProvider;
+import com.movedtoatlanta.logging.models.TestLoggingEvent;
 import org.junit.Assert;
 import org.junit.Test;
 

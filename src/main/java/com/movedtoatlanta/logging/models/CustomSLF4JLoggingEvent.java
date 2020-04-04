@@ -1,10 +1,11 @@
-package com.movedtoatlanta.models;
+package com.movedtoatlanta.logging.models;
 
 import ch.qos.logback.classic.Level;
-import com.movedtoatlanta.interfaces.CustomLoggingEvent;
+import com.movedtoatlanta.logging.LayoutProvider;
+import com.movedtoatlanta.logging.interfaces.CustomLoggingEvent;
 
 /**
- * Class to be extended for {@link com.movedtoatlanta.LayoutProvider} when using SLF4J.
+ * Class to be extended for {@link LayoutProvider} when using SLF4J.
  */
 public abstract class CustomSLF4JLoggingEvent implements CustomLoggingEvent {
     private StackTraceElement stackTraceElement;
