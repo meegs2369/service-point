@@ -1,14 +1,36 @@
 package com.movedtoatlanta.connectors.data;
 
+/**
+ * Class returns common database connection urls as strings.
+ */
 public class DatabaseConnectionStrings {
     private String msSqlPrefix = "jdbc:sqlserver://";
     private String postgreSqlPrefix = "jdbc:postgresql://";
     private String msSqlDbIndicator = ";databaseName=";
 
+    private DatabaseConnectionStrings() {
+    }
+
+    /**
+     * Method to return an MsSQL url.
+     *
+     * @param host String
+     * @param db   String
+     * @param port String
+     * @return String
+     */
     public static String getMSString(String host, String db, String port) {
         return new DatabaseConnectionStrings().buildMssqlUrl(host, db, port);
     }
 
+    /**
+     * Method to return an PostgresSQL url.
+     *
+     * @param host String
+     * @param db   String
+     * @param port String
+     * @return String
+     */
     public static String getPGString(String host, String db, String port) {
         return new DatabaseConnectionStrings().buildPostGresUrl(host, db, port);
     }
