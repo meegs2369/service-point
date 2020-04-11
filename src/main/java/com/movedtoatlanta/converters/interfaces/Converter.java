@@ -1,4 +1,4 @@
-package com.movedtoatlanta.interfaces;
+package com.movedtoatlanta.converters.interfaces;
 
 /**
  * A converter to be implemented in such a way that param U and V result in an instance of T.

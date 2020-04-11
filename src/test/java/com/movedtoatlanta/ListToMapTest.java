@@ -1,5 +1,6 @@
 package com.movedtoatlanta;
 
+import com.movedtoatlanta.converters.ListToMap;
 import org.junit.Assert;
 import org.junit.Test;
 

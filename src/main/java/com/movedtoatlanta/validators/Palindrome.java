@@ -1,4 +1,4 @@
-package com.movedtoatlanta;
+package com.movedtoatlanta.validators;
 
 import java.util.stream.IntStream;
 

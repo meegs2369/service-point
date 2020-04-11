@@ -1,4 +1,4 @@
-package com.movedtoatlanta;
+package com.movedtoatlanta.selectors;
 
 import java.util.Random;
 import java.util.function.IntPredicate;

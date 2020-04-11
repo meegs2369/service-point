@@ -1,4 +1,4 @@
-package com.movedtoatlanta.models;
+package com.movedtoatlanta.logging.models;
 
 public class TestObject {
 	private Long attribute1;

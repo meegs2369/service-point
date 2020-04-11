@@ -1,4 +1,4 @@
-package com.movedtoatlanta;
+package com.movedtoatlanta.selectors;
 
 import java.util.ArrayList;
 import java.util.List;

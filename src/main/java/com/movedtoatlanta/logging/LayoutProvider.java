@@ -1,7 +1,7 @@
-package com.movedtoatlanta;
+package com.movedtoatlanta.logging;
 
 import ch.qos.logback.core.CoreConstants;
-import com.movedtoatlanta.interfaces.CustomLoggingEvent;
+import com.movedtoatlanta.logging.interfaces.CustomLoggingEvent;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -66,7 +66,7 @@ public class LayoutProvider {
     /**
      * Format the line with any masking chosen.
      *
-     * @param event {@link com.movedtoatlanta.interfaces.CustomLoggingEvent}
+     * @param event {@link CustomLoggingEvent}
      * @return String
      */
     public String format(CustomLoggingEvent event) {

@@ -1,21 +1,22 @@
 package com.movedtoatlanta;
 
-import java.util.regex.Pattern;
-
+import com.movedtoatlanta.selectors.RandomStringGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class RandomStringGeneratorTest {
-	@Test
-	public void testRandomStringCaps() {
-		String randomCaps = RandomStringGenerator.generateRandomAlphaNumericString(true, 16);
-		Assert.assertTrue(Pattern.matches("^[A-Z,0-9]{16}$", randomCaps));
-	}
+import java.util.regex.Pattern;
 
-	@Test
-	public void testRandomString() {
-		String randomCaps = RandomStringGenerator.generateRandomAlphaNumericString(false, 16);
-		Assert.assertTrue(Pattern.matches("^[\\w]{16}$", randomCaps));
-	}
+public class RandomStringGeneratorTest {
+    @Test
+    public void testRandomStringCaps() {
+        String randomCaps = RandomStringGenerator.generateRandomAlphaNumericString(true, 16);
+        Assert.assertTrue(Pattern.matches("^[A-Z,0-9]{16}$", randomCaps));
+    }
+
+    @Test
+    public void testRandomString() {
+        String randomCaps = RandomStringGenerator.generateRandomAlphaNumericString(false, 16);
+        Assert.assertTrue(Pattern.matches("^[\\w]{16}$", randomCaps));
+    }
 
 }
