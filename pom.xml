@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.movedtoatlanta</groupId>
     <artifactId>service-point</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.2</version>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -39,6 +39,11 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>8.2.2.jre8</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.janino</groupId>
@@ -75,6 +80,9 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <excludes>
+                        <exclude>**/*Helper.*</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
