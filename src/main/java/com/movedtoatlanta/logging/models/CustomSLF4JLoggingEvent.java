@@ -8,10 +8,10 @@ import com.movedtoatlanta.logging.interfaces.CustomLoggingEvent;
  * Class to be extended for {@link LayoutProvider} when using SLF4J.
  */
 public abstract class CustomSLF4JLoggingEvent implements CustomLoggingEvent {
-    private StackTraceElement stackTraceElement;
-    private Long timestamp;
-    private String formattedMessage;
-    private Level level;
+    private final StackTraceElement stackTraceElement;
+    private final Long timestamp;
+    private final String formattedMessage;
+    private final Level level;
 
     /**
      * @param stackTraceElement StackTraceElement
