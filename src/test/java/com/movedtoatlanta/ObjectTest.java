@@ -2,7 +2,7 @@ package com.movedtoatlanta;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.movedtoatlanta.converters.ListToMap;
-import com.movedtoatlanta.logging.models.TestObject;
+import com.movedtoatlanta.logging.model.TestObject;
 import org.junit.Assert;
 import org.junit.Test;
 

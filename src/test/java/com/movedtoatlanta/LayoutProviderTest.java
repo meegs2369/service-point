@@ -3,7 +3,7 @@ package com.movedtoatlanta;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.core.CoreConstants;
 import com.movedtoatlanta.logging.LayoutProvider;
-import com.movedtoatlanta.logging.models.TestLoggingEvent;
+import com.movedtoatlanta.logging.TestLoggingEvent;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class LayoutProviderTest {
         StackTraceElement ste = new StackTraceElement(LayoutProviderTest.class.getSimpleName(), "processRequest",
                 "InboundController", 45);
         long timestamp = Instant.now()
-                .toEpochMilli();
+                                .toEpochMilli();
         String formattedMessage =
                 "ACCOUNT_NBR=4111111111111111&EXP_DATE=0213&CVV2=123";
 
@@ -30,27 +30,27 @@ public class LayoutProviderTest {
 
         TestLoggingEvent customLoggingEvent = new TestLoggingEvent(ste, timestamp, formattedMessage, level);
         String actual = LayoutProvider.getProvider()
-                .setMask("*")
-                .setPattern("\\d{13,16}")
-                .setUnmaskedLength(4)
-                .format(customLoggingEvent);
+                                      .setMask("*")
+                                      .setPattern("\\d{13,16}")
+                                      .setUnmaskedLength(4)
+                                      .format(customLoggingEvent);
         try {
             LocalDateTime actualTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").parse(actual.substring(0, 23))
-                    .toInstant()
-                    .atZone(ZoneId.systemDefault())
-                    .toLocalDateTime();
+                                                                                        .toInstant()
+                                                                                        .atZone(ZoneId.systemDefault())
+                                                                                        .toLocalDateTime();
             long time = actualTime.toInstant(ZoneOffset.UTC)
-                    .atZone(ZoneId.systemDefault())
-                    .minus(timestamp, ChronoUnit.MILLIS)
-                    .getSecond();
+                                  .atZone(ZoneId.systemDefault())
+                                  .minus(timestamp, ChronoUnit.MILLIS)
+                                  .getSecond();
             Assert.assertTrue(time < 1);
         } catch (Exception e) {
             Assert.fail(e.getMessage());
         }
         actual = actual.substring(23)
-                .trim();
+                       .trim();
         expected = expected.substring(23)
-                .trim();
+                           .trim();
         Assert.assertEquals(expected, actual);
     }
 
@@ -60,7 +60,7 @@ public class LayoutProviderTest {
         StackTraceElement ste = new StackTraceElement(LayoutProviderTest.class.getSimpleName(), "processRequest",
                 "InboundController", 45);
         long timestamp = Instant.now()
-                .toEpochMilli();
+                                .toEpochMilli();
         String formattedMessage =
                 "ACCOUNT_NBR=4111111111111111&EXP_DATE=0213&CVV2=123";
 
@@ -68,27 +68,27 @@ public class LayoutProviderTest {
 
         TestLoggingEvent customLoggingEvent = new TestLoggingEvent(ste, timestamp, formattedMessage, level);
         String actual = LayoutProvider.getProvider()
-                .setMask("*")
-                .setPattern("\\d{18,20}")
-                .setUnmaskedLength(4)
-                .format(customLoggingEvent);
+                                      .setMask("*")
+                                      .setPattern("\\d{18,20}")
+                                      .setUnmaskedLength(4)
+                                      .format(customLoggingEvent);
         try {
             LocalDateTime actualTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").parse(actual.substring(0, 23))
-                    .toInstant()
-                    .atZone(ZoneId.systemDefault())
-                    .toLocalDateTime();
+                                                                                        .toInstant()
+                                                                                        .atZone(ZoneId.systemDefault())
+                                                                                        .toLocalDateTime();
             long time = actualTime.toInstant(ZoneOffset.UTC)
-                    .atZone(ZoneId.systemDefault())
-                    .minus(timestamp, ChronoUnit.MILLIS)
-                    .getSecond();
+                                  .atZone(ZoneId.systemDefault())
+                                  .minus(timestamp, ChronoUnit.MILLIS)
+                                  .getSecond();
             Assert.assertTrue(time < 1);
         } catch (Exception e) {
             Assert.fail(e.getMessage());
         }
         actual = actual.substring(23)
-                .trim();
+                       .trim();
         expected = expected.substring(23)
-                .trim();
+                           .trim();
         Assert.assertEquals(expected, actual);
     }
 }

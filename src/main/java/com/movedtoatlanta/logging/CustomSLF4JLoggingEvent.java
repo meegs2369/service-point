@@ -1,7 +1,6 @@
-package com.movedtoatlanta.logging.models;
+package com.movedtoatlanta.logging;
 
 import ch.qos.logback.classic.Level;
-import com.movedtoatlanta.logging.LayoutProvider;
 import com.movedtoatlanta.logging.interfaces.CustomLoggingEvent;
 
 /**

@@ -1,6 +1,6 @@
 package com.movedtoatlanta;
 
-import com.movedtoatlanta.logging.models.TestObject;
+import com.movedtoatlanta.logging.model.TestObject;
 import com.movedtoatlanta.selectors.SingletonCollector;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,12 +21,12 @@ public class SingletonCollectorTest {
             mobs.add(mob);
         }
         TestObject mob2 = mobs.stream()
-                .filter(mockObject -> mockObject.getAttribute1() == 6L)
-                .collect(SingletonCollector.singleFromStream());
+                              .filter(mockObject -> mockObject.getAttribute1() == 6L)
+                              .collect(SingletonCollector.singleFromStream());
         Assert.assertTrue(mob2.getAttribute3()
-                .matches("6"));
+                              .matches("6"));
         Assert.assertEquals(6, mob2.getAttribute2()
-                .intValue());
+                                   .intValue());
     }
 
 }
