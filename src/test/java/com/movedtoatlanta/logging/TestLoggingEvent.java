@@ -1,4 +1,4 @@
-package com.movedtoatlanta.logging.models;
+package com.movedtoatlanta.logging;
 
 import ch.qos.logback.classic.Level;
 

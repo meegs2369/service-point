@@ -4,9 +4,9 @@ package com.movedtoatlanta.connectors.data;
  * Class returns common database connection urls as strings.
  */
 public class DatabaseConnectionStrings {
-    private String msSqlPrefix = "jdbc:sqlserver://";
-    private String postgreSqlPrefix = "jdbc:postgresql://";
-    private String msSqlDbIndicator = ";databaseName=";
+    private static final String MS_SQL_PREFIX = "jdbc:sqlserver://";
+    private static final String POSTGRESQL_PREFIX = "jdbc:postgresql://";
+    private static final String DATABASE_NAME = ";databaseName=";
 
     private DatabaseConnectionStrings() {
     }
@@ -48,10 +48,10 @@ public class DatabaseConnectionStrings {
     }
 
     private String namedMssqlInstance(String host, String db) {
-        return msSqlPrefix + host + msSqlDbIndicator + db;
+        return MS_SQL_PREFIX + host + DATABASE_NAME + db;
     }
 
     private String buildConnectionString(String host, String db, String port, DB_TYPE type) {
-        return (type == DB_TYPE.MSSQL) ? msSqlPrefix + host + ":" + port + msSqlDbIndicator + db : postgreSqlPrefix + host + ":" + port + "/" + db;
+        return (type == DB_TYPE.MSSQL) ? MS_SQL_PREFIX + host + ":" + port + DATABASE_NAME + db : POSTGRESQL_PREFIX + host + ":" + port + "/" + db;
     }
 }
