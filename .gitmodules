@@ -1,0 +1,3 @@
+[submodule "smtest"]
+	path = smtest
+	url = https://github.com/meegs2369/smtest.git
