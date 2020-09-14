@@ -1,7 +1,7 @@
-package com.movedtoatlanta.connectors.data;
+package com.movedtoatlanta.connectors.data.impl;
 
-import com.movedtoatlanta.connectors.data.interfaces.DataConnection;
-import com.movedtoatlanta.connectors.data.interfaces.PooledDataConnection;
+import com.movedtoatlanta.connectors.data.DataConnection;
+import com.movedtoatlanta.connectors.data.PooledDataConnection;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ public final class DataHelper {
     /**
      * Method to create a minimal pooled Hikari Data Source.
      *
-     * @param connection {@link com.movedtoatlanta.connectors.data.interfaces.PooledDataConnection}
+     * @param connection {@link PooledDataConnection}
      * @return {@link com.zaxxer.hikari.HikariDataSource}
      */
     public static DataSource buildHikariDataSource(PooledDataConnection connection) {
@@ -38,7 +38,7 @@ public final class DataHelper {
     /**
      * Method to create a data source.
      *
-     * @param connection {@link com.movedtoatlanta.connectors.data.interfaces.DataConnection}
+     * @param connection {@link DataConnection}
      * @return DataSource
      */
     public static DataSource buildBasicDataSource(DataConnection connection) {

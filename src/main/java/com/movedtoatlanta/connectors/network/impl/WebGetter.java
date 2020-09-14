@@ -1,7 +1,7 @@
-package com.movedtoatlanta.connectors.network;
+package com.movedtoatlanta.connectors.network.impl;
 
-import com.movedtoatlanta.connectors.network.interfaces.Communicator;
-import com.movedtoatlanta.connectors.network.interfaces.PathValidator;
+import com.movedtoatlanta.connectors.network.Communicator;
+import com.movedtoatlanta.connectors.network.PathValidator;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

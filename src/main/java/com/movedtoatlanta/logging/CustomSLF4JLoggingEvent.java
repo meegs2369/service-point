@@ -1,7 +1,6 @@
 package com.movedtoatlanta.logging;
 
 import ch.qos.logback.classic.Level;
-import com.movedtoatlanta.logging.interfaces.CustomLoggingEvent;
 
 /**
  * Class to be extended for {@link LayoutProvider} when using SLF4J.

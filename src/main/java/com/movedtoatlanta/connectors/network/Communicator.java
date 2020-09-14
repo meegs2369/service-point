@@ -1,4 +1,4 @@
-package com.movedtoatlanta.connectors.network.interfaces;
+package com.movedtoatlanta.connectors.network;
 
 /**
  * @project service-point

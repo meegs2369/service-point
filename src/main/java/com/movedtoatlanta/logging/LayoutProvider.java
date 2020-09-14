@@ -1,7 +1,6 @@
 package com.movedtoatlanta.logging;
 
 import ch.qos.logback.core.CoreConstants;
-import com.movedtoatlanta.logging.interfaces.CustomLoggingEvent;
 
 import java.time.Instant;
 import java.time.ZoneId;

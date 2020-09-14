@@ -1,6 +1,6 @@
 package com.movedtoatlanta;
 
-import com.movedtoatlanta.connectors.network.WebGetter;
+import com.movedtoatlanta.connectors.network.impl.WebGetter;
 import org.junit.Assert;
 import org.junit.Test;
 

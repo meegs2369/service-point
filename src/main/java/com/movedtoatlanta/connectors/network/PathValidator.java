@@ -1,4 +1,4 @@
-package com.movedtoatlanta.connectors.network.interfaces;
+package com.movedtoatlanta.connectors.network;
 
 import java.util.regex.Pattern;
 

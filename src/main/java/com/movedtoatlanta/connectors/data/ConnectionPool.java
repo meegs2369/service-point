@@ -1,4 +1,4 @@
-package com.movedtoatlanta.connectors.data.interfaces;
+package com.movedtoatlanta.connectors.data;
 
 /**
  * Interface for a pool of connections with an upper limit.
